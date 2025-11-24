@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
+/* Disable automatic dark mode */
 :root {
+    color-scheme: light only;
     --bg-cream: #FFF9F0;
     --bg-white: #FFFFFF;
     --text-dark: #2C3E50;
