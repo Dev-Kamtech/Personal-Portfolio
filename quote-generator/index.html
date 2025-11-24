@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quote-card">
+            <h1 class="app-title">Daily Inspiration</h1>
+            <p class="subtitle">Get motivated with random quotes</p>
+
+            <!-- Loading Spinner -->
+            <div id="loader" class="loader hidden"></div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message hidden">
+                Failed to fetch quote. Please try again.
+            </div>
+
+            <!-- Quote Display -->
+            <div id="quoteDisplay" class="quote-display">
+                <div class="quote-icon">"</div>
+
+                <p id="quoteText" class="quote-text">
+                    Click the button below to generate an inspiring quote!
+                </p>
+
+                <div id="authorContainer" class="author-container hidden">
+                    <div class="author-divider"></div>
+                    <p id="quoteAuthor" class="quote-author">— Author Name</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button id="newQuoteBtn" class="action-btn primary-btn">
+                    <span class="btn-icon">✨</span>
+                    <span>New Quote</span>
+                </button>
+
+                <button id="copyQuoteBtn" class="action-btn secondary-btn">
+                    <span class="btn-icon">📋</span>
+                    <span>Copy Quote</span>
+                </button>
+            </div>
+
+            <!-- Copy Success Message -->
+            <div id="copySuccess" class="copy-success hidden">
+                Quote copied to clipboard!
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

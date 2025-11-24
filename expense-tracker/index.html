@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tracker-card">
+            <h1 class="app-title">Expense Tracker</h1>
+            <p class="subtitle">Track your spending effortlessly</p>
+
+            <!-- Balance Display -->
+            <div class="balance-container">
+                <p class="balance-label">Total Expenses</p>
+                <h2 id="totalBalance" class="balance-amount">$0.00</h2>
+            </div>
+
+            <!-- Add Expense Form -->
+            <div class="add-expense-form">
+                <h3 class="form-title">Add New Expense</h3>
+
+                <div class="form-group">
+                    <label for="expenseName">Expense Name</label>
+                    <input
+                        type="text"
+                        id="expenseName"
+                        placeholder="e.g., Groceries, Gas, Coffee"
+                        class="form-input"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseAmount">Amount</label>
+                    <input
+                        type="number"
+                        id="expenseAmount"
+                        placeholder="0.00"
+                        min="0"
+                        step="0.01"
+                        class="form-input"
+                    >
+                </div>
+
+                <button id="addExpenseBtn" class="add-btn">
+                    Add Expense
+                </button>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message hidden">
+                Please fill in all fields
+            </div>
+
+            <!-- Expenses List -->
+            <div class="expenses-section">
+                <div class="expenses-header">
+                    <h3>Recent Expenses</h3>
+                    <button id="clearAllBtn" class="clear-all-btn hidden">
+                        Clear All
+                    </button>
+                </div>
+
+                <div id="expensesList" class="expenses-list">
+                    <!-- Expenses will be added here dynamically -->
+                    <p class="empty-state">No expenses yet. Add one to get started!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

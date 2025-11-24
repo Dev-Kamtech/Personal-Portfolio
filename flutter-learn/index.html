@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Learning Hub 🦋</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating cute elements -->
+    <div class="floating-container" id="floatingContainer"></div>
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🦋</span>
+            <span class="logo-text">Flutter Fun</span>
+        </div>
+        <nav class="nav">
+            <a href="#why" class="nav-link">Why Flutter?</a>
+            <a href="#setup" class="nav-link">Setup</a>
+            <a href="#projects" class="nav-link">My Projects</a>
+            <a href="https://flutter.dev" target="_blank" class="cta-btn">Official Docs 📚</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="cute-badges">
+                <span class="badge">Cross-Platform 🌈</span>
+                <span class="badge">Fast ⚡</span>
+                <span class="badge">Beautiful 💖</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-word">Build</span>
+                <span class="title-word">Beautiful</span>
+                <span class="title-word">Apps</span>
+                <br>
+                <span class="title-word highlight">with Flutter!</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Create stunning mobile, web, and desktop apps from a single codebase! ✨
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#setup" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <span class="btn-icon">🚀</span>
+                </a>
+                <a href="https://flutter.dev/learn" target="_blank" class="btn btn-secondary">
+                    <span>Learn More</span>
+                    <span class="btn-icon">📖</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Animated Phone Mockup -->
+        <div class="phone-mockup">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <div class="app-demo">
+                        <div class="app-header">
+                            <h3>My Flutter App 💙</h3>
+                        </div>
+                        <div class="app-content">
+                            <div class="demo-card">
+                                <span class="card-icon">🎨</span>
+                                <p>Beautiful UI</p>
+                            </div>
+                            <div class="demo-card">
+                                <span class="card-icon">⚡</span>
+                                <p>Super Fast</p>
+                            </div>
+                            <div class="demo-card">
+                                <span class="card-icon">🌈</span>
+                                <p>Hot Reload</p>
+                            </div>
+                        </div>
+                        <button class="demo-button">
+                            <span>✨ Tap Me!</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="phone-button"></div>
+            </div>
+            <div class="phone-shadow"></div>
+        </div>
+    </section>
+
+    <!-- Why I Love Flutter -->
+    <section id="why" class="why-section">
+        <h2 class="section-title">
+            <span class="title-icon">💖</span>
+            Why I Love Flutter
+            <span class="title-icon">💖</span>
+        </h2>
+
+        <div class="why-content">
+            <div class="why-text">
+                <p class="quote">"Flutter changed how I build apps forever! ✨"</p>
+                <p>
+                    I fell in love with Flutter because it makes app development FUN! 🎉
+                    The hot reload feature lets me see changes instantly, and the widget system
+                    is like playing with colorful LEGO blocks! 🧱
+                </p>
+                <p>
+                    Building beautiful UIs that work on iOS, Android, Web, and Desktop from ONE
+                    codebase feels like magic! 🪄 Plus, the Flutter community is super friendly
+                    and helpful! 🤝
+                </p>
+                <div class="love-points">
+                    <div class="love-point">
+                        <span class="point-icon">⚡</span>
+                        <span>Lightning-fast hot reload</span>
+                    </div>
+                    <div class="love-point">
+                        <span class="point-icon">🎨</span>
+                        <span>Gorgeous Material & Cupertino widgets</span>
+                    </div>
+                    <div class="love-point">
+                        <span class="point-icon">🚀</span>
+                        <span>Native performance</span>
+                    </div>
+                    <div class="love-point">
+                        <span class="point-icon">💙</span>
+                        <span>Amazing community support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Guides -->
+    <section id="setup" class="setup-section">
+        <h2 class="section-title">
+            <span class="title-icon">🛠️</span>
+            Setup Flutter
+            <span class="title-icon">🛠️</span>
+        </h2>
+
+        <div class="setup-tabs">
+            <button class="tab-btn active" data-tab="mac">
+                <span class="tab-icon">🍎</span>
+                <span>macOS</span>
+            </button>
+            <button class="tab-btn" data-tab="windows">
+                <span class="tab-icon">🪟</span>
+                <span>Windows</span>
+            </button>
+            <button class="tab-btn" data-tab="linux">
+                <span class="tab-icon">🐧</span>
+                <span>Linux</span>
+            </button>
+        </div>
+
+        <div class="tab-content active" id="mac">
+            <div class="setup-card">
+                <h3>📥 Install Flutter on macOS</h3>
+                <ol class="setup-steps">
+                    <li>
+                        <strong>Download Flutter SDK</strong>
+                        <p>Visit <a href="https://flutter.dev/docs/get-started/install/macos" target="_blank">flutter.dev</a> and download the latest stable release</p>
+                        <div class="code-block">flutter_macos_3.x.x-stable.zip</div>
+                    </li>
+                    <li>
+                        <strong>Extract the file</strong>
+                        <div class="code-block">
+                            cd ~/development<br>
+                            unzip ~/Downloads/flutter_macos_3.x.x-stable.zip
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Add Flutter to PATH</strong>
+                        <div class="code-block">
+                            export PATH="$PATH:`pwd`/flutter/bin"
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Run flutter doctor</strong>
+                        <div class="code-block">flutter doctor</div>
+                        <p>This checks your environment and displays a report 🔍</p>
+                    </li>
+                    <li>
+                        <strong>Install Xcode</strong>
+                        <p>Download from the Mac App Store for iOS development 📱</p>
+                    </li>
+                </ol>
+                <a href="https://docs.flutter.dev/get-started/install/macos" target="_blank" class="setup-link">
+                    Full macOS Guide →
+                </a>
+            </div>
+        </div>
+
+        <div class="tab-content" id="windows">
+            <div class="setup-card">
+                <h3>📥 Install Flutter on Windows</h3>
+                <ol class="setup-steps">
+                    <li>
+                        <strong>Download Flutter SDK</strong>
+                        <p>Get it from <a href="https://flutter.dev/docs/get-started/install/windows" target="_blank">flutter.dev</a></p>
+                        <div class="code-block">flutter_windows_3.x.x-stable.zip</div>
+                    </li>
+                    <li>
+                        <strong>Extract to a location</strong>
+                        <p>Example: C:\src\flutter (avoid spaces in path!)</p>
+                    </li>
+                    <li>
+                        <strong>Update PATH variable</strong>
+                        <p>Add flutter\bin to your PATH environment variable</p>
+                    </li>
+                    <li>
+                        <strong>Run flutter doctor</strong>
+                        <div class="code-block">flutter doctor</div>
+                    </li>
+                    <li>
+                        <strong>Install Android Studio</strong>
+                        <p>Download from <a href="https://developer.android.com/studio" target="_blank">developer.android.com</a></p>
+                    </li>
+                </ol>
+                <a href="https://docs.flutter.dev/get-started/install/windows" target="_blank" class="setup-link">
+                    Full Windows Guide →
+                </a>
+            </div>
+        </div>
+
+        <div class="tab-content" id="linux">
+            <div class="setup-card">
+                <h3>📥 Install Flutter on Linux</h3>
+                <ol class="setup-steps">
+                    <li>
+                        <strong>Download Flutter SDK</strong>
+                        <div class="code-block">flutter_linux_3.x.x-stable.tar.xz</div>
+                    </li>
+                    <li>
+                        <strong>Extract the file</strong>
+                        <div class="code-block">
+                            cd ~/development<br>
+                            tar xf ~/Downloads/flutter_linux_3.x.x-stable.tar.xz
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Add to PATH</strong>
+                        <div class="code-block">
+                            export PATH="$PATH:`pwd`/flutter/bin"
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Run flutter doctor</strong>
+                        <div class="code-block">flutter doctor</div>
+                    </li>
+                    <li>
+                        <strong>Install dependencies</strong>
+                        <div class="code-block">
+                            sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev
+                        </div>
+                    </li>
+                </ol>
+                <a href="https://docs.flutter.dev/get-started/install/linux" target="_blank" class="setup-link">
+                    Full Linux Guide →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Projects -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">
+            <span class="title-icon">🎨</span>
+            What I Built with Flutter
+            <span class="title-icon">🎨</span>
+        </h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">📝</div>
+                <h3>WorkPost App</h3>
+                <p>A full-featured job posting application with Firebase backend, user authentication, and real-time updates!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">FastAPI</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">✅</div>
+                <h3>Task Manager</h3>
+                <p>Beautiful task management app with local storage, categories, and priority levels. Super productive!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">SharedPreferences</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🎯</div>
+                <h3>Quiz App</h3>
+                <p>Interactive quiz app showcasing OOP principles in Dart with score tracking and multiple categories!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">OOP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources-section">
+        <h2 class="section-title">
+            <span class="title-icon">📚</span>
+            Helpful Resources
+            <span class="title-icon">📚</span>
+        </h2>
+
+        <div class="resources-grid">
+            <a href="https://flutter.dev" target="_blank" class="resource-card">
+                <span class="resource-icon">🌐</span>
+                <h3>Flutter.dev</h3>
+                <p>Official Flutter website</p>
+            </a>
+
+            <a href="https://pub.dev" target="_blank" class="resource-card">
+                <span class="resource-icon">📦</span>
+                <h3>Pub.dev</h3>
+                <p>Flutter packages repository</p>
+            </a>
+
+            <a href="https://dartpad.dev" target="_blank" class="resource-card">
+                <span class="resource-icon">💻</span>
+                <h3>DartPad</h3>
+                <p>Try Dart online!</p>
+            </a>
+
+            <a href="https://www.youtube.com/c/flutterdev" target="_blank" class="resource-card">
+                <span class="resource-icon">📺</span>
+                <h3>Flutter YouTube</h3>
+                <p>Official video tutorials</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💙 by Felix Divine</p>
+        <p class="footer-tagline">Building beautiful apps, one widget at a time! 🦋✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

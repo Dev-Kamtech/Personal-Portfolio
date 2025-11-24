@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Unbeatable AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Objects -->
+    <div class="floating-container" id="floatingContainer">
+        <!-- Draggable floating objects will be added by JavaScript -->
+    </div>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="game-card">
+            <!-- Header -->
+            <div class="game-header">
+                <h1 class="game-title">
+                    <span class="title-x">X</span>
+                    <span class="title-vs">vs</span>
+                    <span class="title-o">O</span>
+                </h1>
+                <p class="game-subtitle">Challenge the Unbeatable AI</p>
+            </div>
+
+            <!-- Difficulty Selection -->
+            <div class="difficulty-section" id="difficultySection">
+                <h3 class="section-title">Choose Your Challenge</h3>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" data-level="easy">
+                        <span class="diff-icon">😊</span>
+                        <span class="diff-label">Easy</span>
+                    </button>
+                    <button class="difficulty-btn active" data-level="medium">
+                        <span class="diff-icon">😐</span>
+                        <span class="diff-label">Medium</span>
+                    </button>
+                    <button class="difficulty-btn" data-level="impossible">
+                        <span class="diff-icon">😈</span>
+                        <span class="diff-label">Impossible</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Game Stats -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-label">You (X)</span>
+                    <span class="stat-value" id="playerScore">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Draws</span>
+                    <span class="stat-value" id="drawScore">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">AI (O)</span>
+                    <span class="stat-value" id="aiScore">0</span>
+                </div>
+            </div>
+
+            <!-- Current Player Display -->
+            <div class="current-player" id="currentPlayer">
+                <span class="player-text">Your Turn</span>
+                <span class="player-symbol">X</span>
+            </div>
+
+            <!-- Game Board -->
+            <div class="board-container">
+                <div class="game-board" id="gameBoard">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                <svg class="win-line" id="winLine" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="0" x2="0" y2="0" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- Game Controls -->
+            <div class="controls">
+                <button class="control-btn restart-btn" id="restartBtn">
+                    <span class="btn-icon">🔄</span>
+                    <span>Restart Game</span>
+                </button>
+                <button class="control-btn reset-btn" id="resetBtn">
+                    <span class="btn-icon">🆕</span>
+                    <span>Reset Scores</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Win/Draw Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon">🎉</div>
+            <h2 class="modal-title" id="modalTitle">You Win!</h2>
+            <p class="modal-message" id="modalMessage">Congratulations! You beat the AI!</p>
+            <button class="modal-btn" id="modalBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Learning Hub 🎯</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating cute elements -->
+    <div class="floating-container" id="floatingContainer"></div>
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🎯</span>
+            <span class="logo-text">Dart Fun</span>
+        </div>
+        <nav class="nav">
+            <a href="#why" class="nav-link">Why Dart?</a>
+            <a href="#basics" class="nav-link">Basics</a>
+            <a href="#examples" class="nav-link">Examples</a>
+            <a href="https://dart.dev" target="_blank" class="cta-btn">Official Docs 📚</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="cute-badges">
+                <span class="badge">Fast ⚡</span>
+                <span class="badge">Type-Safe 🛡️</span>
+                <span class="badge">Modern 🚀</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-word">Code</span>
+                <span class="title-word">with</span>
+                <span class="title-word highlight">Dart!</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                The programming language that powers Flutter & more! 🎨✨
+            </p>
+
+            <div class="hero-buttons">
+                <a href="https://dartpad.dev" target="_blank" class="btn btn-primary">
+                    <span>Try DartPad</span>
+                    <span class="btn-icon">💻</span>
+                </a>
+                <a href="#basics" class="btn btn-secondary">
+                    <span>Learn Basics</span>
+                    <span class="btn-icon">📖</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Animated Code Editor Mockup -->
+        <div class="code-mockup">
+            <div class="editor-window">
+                <div class="editor-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="file-name">main.dart 🎯</div>
+                </div>
+                <div class="editor-content">
+                    <pre><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="keyword">var</span> <span class="variable">message</span> = <span class="string">'Hello, Dart!'</span>;
+  <span class="function">print</span>(<span class="variable">message</span>);
+
+  <span class="comment">// Lists are fun! 🎉</span>
+  <span class="keyword">List</span>&lt;<span class="type">String</span>&gt; <span class="variable">emojis</span> = [
+    <span class="string">'🎯'</span>, <span class="string">'💙'</span>, <span class="string">'✨'</span>
+  ];
+
+  <span class="comment">// Loop through them</span>
+  <span class="keyword">for</span> (<span class="keyword">var</span> emoji <span class="keyword">in</span> emojis) {
+    <span class="function">print</span>(emoji);
+  }
+}</code></pre>
+                </div>
+                <div class="editor-output">
+                    <div class="output-header">Output Console 🖥️</div>
+                    <div class="output-text">
+                        Hello, Dart!<br>
+                        🎯<br>
+                        💙<br>
+                        ✨
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why I Love Dart -->
+    <section id="why" class="why-section">
+        <h2 class="section-title">
+            <span class="title-icon">💙</span>
+            Why I Love Dart
+            <span class="title-icon">💙</span>
+        </h2>
+
+        <div class="why-content">
+            <p class="quote">"Dart makes coding feel like magic! ✨"</p>
+            <p>
+                Dart is my favorite language because it's clean, powerful, and FUN to write! 🎉
+                The syntax is super readable, and it has amazing features like null safety that
+                catch bugs before they happen! 🐛
+            </p>
+            <p>
+                What I love most is how Dart compiles to native code, making apps lightning fast! ⚡
+                Plus, it powers Flutter, which means I can build apps for ANY platform! 🚀
+            </p>
+
+            <div class="love-grid">
+                <div class="love-card">
+                    <span class="love-icon">🚀</span>
+                    <h3>Super Fast</h3>
+                    <p>Compiles to native ARM & x64 machine code for mobile & desktop</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">🛡️</span>
+                    <h3>Null Safety</h3>
+                    <p>Sound null safety catches errors at compile time!</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">🎨</span>
+                    <h3>Clean Syntax</h3>
+                    <p>Easy to read and write - perfect for beginners!</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">🔥</span>
+                    <h3>Hot Reload</h3>
+                    <p>See changes instantly during development!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dart Basics -->
+    <section id="basics" class="basics-section">
+        <h2 class="section-title">
+            <span class="title-icon">📚</span>
+            Dart Basics
+            <span class="title-icon">📚</span>
+        </h2>
+
+        <div class="basics-grid">
+            <div class="basic-card">
+                <h3>Variables 📦</h3>
+                <div class="code-example">
+<pre><code><span class="comment">// Let Dart infer the type</span>
+<span class="keyword">var</span> name = <span class="string">'Felix'</span>;
+
+<span class="comment">// Or be explicit</span>
+<span class="type">String</span> greeting = <span class="string">'Hello!'</span>;
+<span class="type">int</span> age = 20;
+<span class="type">double</span> pi = 3.14;
+<span class="type">bool</span> isAwesome = <span class="keyword">true</span>;</code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Functions 🎯</h3>
+                <div class="code-example">
+<pre><code><span class="comment">// Simple function</span>
+<span class="type">String</span> <span class="function">greet</span>(<span class="type">String</span> name) {
+  <span class="keyword">return</span> <span class="string">'Hello, $name!'</span>;
+}
+
+<span class="comment">// Arrow function</span>
+<span class="type">int</span> <span class="function">double</span>(<span class="type">int</span> x) => x * 2;</code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Lists 📝</h3>
+                <div class="code-example">
+<pre><code><span class="comment">// Create a list</span>
+<span class="keyword">var</span> fruits = [
+  <span class="string">'🍎'</span>, <span class="string">'🍌'</span>, <span class="string">'🍊'</span>
+];
+
+<span class="comment">// Add items</span>
+fruits.<span class="function">add</span>(<span class="string">'🍇'</span>);</code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Maps 🗺️</h3>
+                <div class="code-example">
+<pre><code><span class="comment">// Key-value pairs</span>
+<span class="keyword">var</span> person = {
+  <span class="string">'name'</span>: <span class="string">'Felix'</span>,
+  <span class="string">'age'</span>: 20,
+  <span class="string">'loves'</span>: <span class="string">'coding'</span>
+};</code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Classes 🏗️</h3>
+                <div class="code-example">
+<pre><code><span class="keyword">class</span> <span class="type">Person</span> {
+  <span class="type">String</span> name;
+  <span class="type">int</span> age;
+
+  <span class="function">Person</span>(<span class="keyword">this</span>.name, <span class="keyword">this</span>.age);
+
+  <span class="keyword">void</span> <span class="function">sayHello</span>() {
+    <span class="function">print</span>(<span class="string">'Hi, I\'m $name!'</span>);
+  }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Async/Await ⏱️</h3>
+                <div class="code-example">
+<pre><code><span class="keyword">Future</span>&lt;<span class="type">String</span>&gt; <span class="function">fetchData</span>() <span class="keyword">async</span> {
+  <span class="keyword">await</span> <span class="type">Future</span>.<span class="function">delayed</span>(
+    <span class="type">Duration</span>(seconds: 2)
+  );
+  <span class="keyword">return</span> <span class="string">'Data loaded! ✨'</span>;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cool Examples -->
+    <section id="examples" class="examples-section">
+        <h2 class="section-title">
+            <span class="title-icon">🎨</span>
+            Cool Examples
+            <span class="title-icon">🎨</span>
+        </h2>
+
+        <div class="examples-container">
+            <div class="example-card">
+                <h3>🎲 Random Number Generator</h3>
+                <div class="code-example">
+<pre><code><span class="keyword">import</span> <span class="string">'dart:math'</span>;
+
+<span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="keyword">var</span> random = <span class="type">Random</span>();
+  <span class="keyword">var</span> number = random.<span class="function">nextInt</span>(100);
+  <span class="function">print</span>(<span class="string">'Your lucky number: $number'</span>);
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>📊 Filter & Map</h3>
+                <div class="code-example">
+<pre><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="keyword">var</span> numbers = [1, 2, 3, 4, 5];
+
+  <span class="comment">// Filter even numbers</span>
+  <span class="keyword">var</span> evens = numbers
+    .<span class="function">where</span>((n) => n % 2 == 0);
+
+  <span class="comment">// Double each number</span>
+  <span class="keyword">var</span> doubled = numbers
+    .<span class="function">map</span>((n) => n * 2);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources-section">
+        <h2 class="section-title">
+            <span class="title-icon">🔗</span>
+            Helpful Resources
+            <span class="title-icon">🔗</span>
+        </h2>
+
+        <div class="resources-grid">
+            <a href="https://dart.dev" target="_blank" class="resource-card">
+                <span class="resource-icon">🌐</span>
+                <h3>Dart.dev</h3>
+                <p>Official Dart website</p>
+            </a>
+
+            <a href="https://dartpad.dev" target="_blank" class="resource-card">
+                <span class="resource-icon">💻</span>
+                <h3>DartPad</h3>
+                <p>Try Dart in your browser!</p>
+            </a>
+
+            <a href="https://pub.dev" target="_blank" class="resource-card">
+                <span class="resource-icon">📦</span>
+                <h3>Pub.dev</h3>
+                <p>Dart packages</p>
+            </a>
+
+            <a href="https://api.dart.dev" target="_blank" class="resource-card">
+                <span class="resource-icon">📖</span>
+                <h3>API Reference</h3>
+                <p>Complete Dart API docs</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💙 by Felix Divine</p>
+        <p class="footer-tagline">Coding with Dart, one line at a time! 🎯✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Learning Hub 💚</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-container" id="floatingContainer"></div>
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">💚</span>
+            <span class="logo-text">Supabase Power</span>
+        </div>
+        <nav class="nav">
+            <a href="#why" class="nav-link">Why Supabase?</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#projects" class="nav-link">My Projects</a>
+            <a href="https://supabase.com/docs" target="_blank" class="cta-btn">Official Docs 📚</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="cute-badges">
+                <span class="badge">Open Source 🌟</span>
+                <span class="badge">PostgreSQL 🐘</span>
+                <span class="badge">Real-time ⚡</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-word">Build</span>
+                <span class="title-word">Amazing</span>
+                <span class="title-word highlight">Backends!</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                The open-source Firebase alternative! PostgreSQL power! 💚✨
+            </p>
+
+            <div class="hero-buttons">
+                <a href="https://supabase.com/" target="_blank" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <span class="btn-icon">🚀</span>
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    <span>Learn More</span>
+                    <span class="btn-icon">📖</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="dashboard-mockup">
+            <div class="dashboard-window">
+                <div class="dashboard-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="page-title">Supabase Dashboard 💚</div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-item active">🗄️ Database</div>
+                        <div class="sidebar-item">🔐 Authentication</div>
+                        <div class="sidebar-item">📦 Storage</div>
+                        <div class="sidebar-item">⚡ Edge Functions</div>
+                    </div>
+                    <div class="dashboard-main">
+                        <div class="stat-cards">
+                            <div class="stat-card">
+                                <div class="stat-icon">👥</div>
+                                <div class="stat-value">2,456</div>
+                                <div class="stat-label">Users</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🗄️</div>
+                                <div class="stat-value">8,901</div>
+                                <div class="stat-label">Records</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">💚</div>
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Uptime</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="why-section">
+        <h2 class="section-title">
+            <span class="title-icon">💚</span>
+            Why I Love Supabase
+            <span class="title-icon">💚</span>
+        </h2>
+
+        <div class="why-content">
+            <p class="quote">"Supabase is Firebase but with PostgreSQL superpowers! 💚"</p>
+            <p>
+                Supabase is AMAZING! 🚀 It's open-source, uses PostgreSQL (a real database!), and gives me
+                all the backend features I need without vendor lock-in! 🎉
+            </p>
+            <p>
+                I love that it's built on open-source tools and gives me direct SQL access! Plus, the
+                real-time subscriptions and auto-generated APIs make development super fast! ⚡
+            </p>
+
+            <div class="love-grid">
+                <div class="love-card">
+                    <span class="love-icon">🐘</span>
+                    <h3>PostgreSQL</h3>
+                    <p>Full power of PostgreSQL database!</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">🌟</span>
+                    <h3>Open Source</h3>
+                    <p>No vendor lock-in, full control!</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">⚡</span>
+                    <h3>Real-time</h3>
+                    <p>Live database subscriptions built-in!</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">🚀</span>
+                    <h3>Auto APIs</h3>
+                    <p>REST & GraphQL APIs generated automatically!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <h2 class="section-title">
+            <span class="title-icon">✨</span>
+            Supabase Features
+            <span class="title-icon">✨</span>
+        </h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🗄️ PostgreSQL Database</h3>
+                <p>Full PostgreSQL database with all its features! Relations, triggers, functions, and more!</p>
+                <div class="feature-tags">
+                    <span class="tag">SQL</span>
+                    <span class="tag">Relations</span>
+                    <span class="tag">ACID</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔐 Authentication</h3>
+                <p>Complete auth system with email, OAuth providers, magic links & more!</p>
+                <div class="feature-tags">
+                    <span class="tag">Secure</span>
+                    <span class="tag">Easy</span>
+                    <span class="tag">Flexible</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>📦 Storage</h3>
+                <p>Store and serve files with built-in CDN and image transformations!</p>
+                <div class="feature-tags">
+                    <span class="tag">Fast</span>
+                    <span class="tag">CDN</span>
+                    <span class="tag">Transforms</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>⚡ Edge Functions</h3>
+                <p>Deploy serverless functions at the edge for ultra-low latency!</p>
+                <div class="feature-tags">
+                    <span class="tag">Deno</span>
+                    <span class="tag">Fast</span>
+                    <span class="tag">Global</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔔 Real-time</h3>
+                <p>Subscribe to database changes and get instant updates!</p>
+                <div class="feature-tags">
+                    <span class="tag">Live</span>
+                    <span class="tag">WebSockets</span>
+                    <span class="tag">Easy</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔌 Auto APIs</h3>
+                <p>RESTful and GraphQL APIs generated automatically from your schema!</p>
+                <div class="feature-tags">
+                    <span class="tag">REST</span>
+                    <span class="tag">GraphQL</span>
+                    <span class="tag">Auto-gen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">
+            <span class="title-icon">🎨</span>
+            Built with Supabase
+            <span class="title-icon">🎨</span>
+        </h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">💬</div>
+                <h3>Real-time Chat App</h3>
+                <p>Messaging app with live updates using Supabase real-time subscriptions and PostgreSQL!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Real-time</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">📱</div>
+                <h3>Social Media App</h3>
+                <p>Full-featured social platform with auth, posts, and image uploads!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">Supabase</span>
+                    <span class="tech-tag">Storage</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">📊</div>
+                <h3>Analytics Dashboard</h3>
+                <p>Real-time analytics with PostgreSQL views and Edge Functions!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Edge Functions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-section">
+        <h2 class="section-title">
+            <span class="title-icon">🔗</span>
+            Helpful Resources
+            <span class="title-icon">🔗</span>
+        </h2>
+
+        <div class="resources-grid">
+            <a href="https://supabase.com/" target="_blank" class="resource-card">
+                <span class="resource-icon">💚</span>
+                <h3>Supabase</h3>
+                <p>Official website</p>
+            </a>
+
+            <a href="https://supabase.com/docs" target="_blank" class="resource-card">
+                <span class="resource-icon">📖</span>
+                <h3>Documentation</h3>
+                <p>Complete docs</p>
+            </a>
+
+            <a href="https://www.youtube.com/@Supabase" target="_blank" class="resource-card">
+                <span class="resource-icon">📺</span>
+                <h3>YouTube</h3>
+                <p>Video tutorials</p>
+            </a>
+
+            <a href="https://github.com/supabase/supabase" target="_blank" class="resource-card">
+                <span class="resource-icon">💻</span>
+                <h3>GitHub</h3>
+                <p>Open source code</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made with 💚 by Felix Divine</p>
+        <p class="footer-tagline">Building with Supabase, one query at a time! 💚✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

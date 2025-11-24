@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Native Learning Hub ⚛️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-container" id="floatingContainer"></div>
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">⚛️</span>
+            <span class="logo-text">React Native</span>
+        </div>
+        <nav class="nav">
+            <a href="#why" class="nav-link">Why RN?</a>
+            <a href="#setup" class="nav-link">Setup</a>
+            <a href="#projects" class="nav-link">My Projects</a>
+            <a href="https://reactnative.dev/docs" target="_blank" class="cta-btn">Official Docs 📚</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="cute-badges">
+                <span class="badge">Cross-Platform 🌍</span>
+                <span class="badge">React Power ⚛️</span>
+                <span class="badge">Native Feel 📱</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-word">Build</span>
+                <span class="title-word">Native</span>
+                <span class="title-word">Apps</span>
+                <br>
+                <span class="title-word highlight">with React!</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Create truly native mobile apps using React! iOS & Android from one codebase! ⚛️✨
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#setup" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <span class="btn-icon">🚀</span>
+                </a>
+                <a href="https://reactnative.dev/docs/getting-started" target="_blank" class="btn btn-secondary">
+                    <span>Learn More</span>
+                    <span class="btn-icon">📖</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="phone-mockup">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <div class="app-demo">
+                        <div class="app-header">
+                            <h3>⚛️ My React Native App</h3>
+                        </div>
+                        <div class="app-content">
+                            <div class="demo-card">
+                                <span class="card-icon">📱</span>
+                                <p>Native Components</p>
+                            </div>
+                            <div class="demo-card">
+                                <span class="card-icon">⚡</span>
+                                <p>Fast Performance</p>
+                            </div>
+                            <div class="demo-card">
+                                <span class="card-icon">🎨</span>
+                                <p>Beautiful UI</p>
+                            </div>
+                        </div>
+                        <button class="demo-button">
+                            <span>⚛️ Press Me!</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="phone-button"></div>
+            </div>
+            <div class="phone-shadow"></div>
+        </div>
+    </section>
+
+    <section id="why" class="why-section">
+        <h2 class="section-title">
+            <span class="title-icon">💙</span>
+            Why I Love React Native
+            <span class="title-icon">💙</span>
+        </h2>
+
+        <div class="why-content">
+            <div class="why-text">
+                <p class="quote">"React Native brings React to mobile! ⚛️🎉"</p>
+                <p>
+                    I LOVE React Native because it lets me use my React skills to build REAL native apps! 📱
+                    No more learning separate languages for iOS and Android - one codebase, both platforms! 🚀
+                </p>
+                <p>
+                    The hot reload is amazing, the component system is familiar, and the performance is truly
+                    native! Plus, I can use JavaScript libraries and npm packages! 📦
+                </p>
+                <div class="love-points">
+                    <div class="love-point">
+                        <span class="point-icon">⚛️</span>
+                        <span>Use React skills for mobile!</span>
+                    </div>
+                    <div class="love-point">
+                        <span class="point-icon">📱</span>
+                        <span>True native performance</span>
+                    </div>
+                    <div class="love-point">
+                        <span class="point-icon">🔥</span>
+                        <span>Fast Refresh hot reload</span>
+                    </div>
+                    <div class="love-point">
+                        <span class="point-icon">📦</span>
+                        <span>Huge npm ecosystem</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="setup" class="setup-section">
+        <h2 class="section-title">
+            <span class="title-icon">🛠️</span>
+            Setup React Native
+            <span class="title-icon">🛠️</span>
+        </h2>
+
+        <div class="setup-card">
+            <h3>📥 Quick Setup with Expo</h3>
+            <p>The easiest way to start building React Native apps!</p>
+            <div class="code-block">
+                npx create-expo-app my-app<br>
+                cd my-app<br>
+                npx expo start
+            </div>
+            <p>✨ Then scan the QR code with Expo Go app on your phone!</p>
+        </div>
+
+        <div class="setup-card">
+            <h3>⚙️ React Native CLI</h3>
+            <p>For full native control and custom native modules:</p>
+            <div class="code-block">
+                npx react-native init MyApp<br>
+                cd MyApp<br>
+                npx react-native run-android<br>
+                npx react-native run-ios
+            </div>
+            <p>Requires Android Studio and/or Xcode setup!</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">
+            <span class="title-icon">🎨</span>
+            Built with React Native
+            <span class="title-icon">🎨</span>
+        </h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">📱</div>
+                <h3>Mobile App</h3>
+                <p>Full-featured mobile application with navigation, API calls, and local storage!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Expo</span>
+                    <span class="tech-tag">AsyncStorage</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🛒</div>
+                <h3>E-Commerce App</h3>
+                <p>Shopping app with product catalog, cart, and checkout flow!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Redux</span>
+                    <span class="tech-tag">Stripe</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">💬</div>
+                <h3>Chat Application</h3>
+                <p>Real-time messaging with push notifications and media sharing!</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Notifications</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-section">
+        <h2 class="section-title">
+            <span class="title-icon">🔗</span>
+            Helpful Resources
+            <span class="title-icon">🔗</span>
+        </h2>
+
+        <div class="resources-grid">
+            <a href="https://reactnative.dev/" target="_blank" class="resource-card">
+                <span class="resource-icon">⚛️</span>
+                <h3>React Native</h3>
+                <p>Official website</p>
+            </a>
+
+            <a href="https://expo.dev/" target="_blank" class="resource-card">
+                <span class="resource-icon">📱</span>
+                <h3>Expo</h3>
+                <p>Easiest way to build RN apps</p>
+            </a>
+
+            <a href="https://reactnative.dev/showcase" target="_blank" class="resource-card">
+                <span class="resource-icon">🎨</span>
+                <h3>Showcase</h3>
+                <p>Apps built with RN</p>
+            </a>
+
+            <a href="https://www.youtube.com/c/ReactNativeSchool" target="_blank" class="resource-card">
+                <span class="resource-icon">📺</span>
+                <h3>RN School</h3>
+                <p>Video tutorials</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made with 💙 by Felix Divine</p>
+        <p class="footer-tagline">Building native apps, one component at a time! ⚛️✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

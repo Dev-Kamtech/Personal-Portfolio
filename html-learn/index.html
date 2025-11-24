@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Hub 🌐</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating cute elements -->
+    <div class="floating-container" id="floatingContainer"></div>
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🌐</span>
+            <span class="logo-text">HTML Fun</span>
+        </div>
+        <nav class="nav">
+            <a href="#why" class="nav-link">Why HTML?</a>
+            <a href="#basics" class="nav-link">Basics</a>
+            <a href="#examples" class="nav-link">Examples</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="cta-btn">MDN Docs 📚</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="cute-badges">
+                <span class="badge">Structure 🏗️</span>
+                <span class="badge">Semantic 📝</span>
+                <span class="badge">Universal 🌍</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-word">Build</span>
+                <span class="title-word">the</span>
+                <span class="title-word">Web</span>
+                <span class="title-word highlight">with HTML!</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                The foundation of every website! Structure content like a pro! 🎨✨
+            </p>
+
+            <div class="hero-buttons">
+                <a href="https://www.w3schools.com/html/" target="_blank" class="btn btn-primary">
+                    <span>Start Learning</span>
+                    <span class="btn-icon">🚀</span>
+                </a>
+                <a href="#basics" class="btn btn-secondary">
+                    <span>Learn Basics</span>
+                    <span class="btn-icon">📖</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Browser Mockup -->
+        <div class="browser-mockup">
+            <div class="browser-window">
+                <div class="browser-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="address-bar">
+                        <span class="lock-icon">🔒</span>
+                        <span class="url">mywebsite.com/index.html</span>
+                    </div>
+                </div>
+                <div class="browser-content">
+                    <div class="rendered-page">
+                        <div class="page-header">
+                            <h1>🌈 My Awesome Website</h1>
+                            <nav class="page-nav">
+                                <a href="#">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact</a>
+                            </nav>
+                        </div>
+                        <div class="page-content">
+                            <div class="welcome-card">
+                                <h2>Welcome! 👋</h2>
+                                <p>This is built with <strong>HTML</strong>!</p>
+                                <button class="demo-btn">Click Me! ✨</button>
+                            </div>
+                            <div class="features">
+                                <div class="feature-box">📝 Text</div>
+                                <div class="feature-box">🖼️ Images</div>
+                                <div class="feature-box">🔗 Links</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why I Love HTML -->
+    <section id="why" class="why-section">
+        <h2 class="section-title">
+            <span class="title-icon">💚</span>
+            Why I Love HTML
+            <span class="title-icon">💚</span>
+        </h2>
+
+        <div class="why-content">
+            <p class="quote">"HTML is where all web magic begins! 🌟"</p>
+            <p>
+                HTML is the BACKBONE of the web! 🦴 It's the first language I learned, and it opened
+                the door to web development for me! Every website you see starts with HTML! 🌐
+            </p>
+            <p>
+                I love how HTML is semantic and accessible - making content readable for everyone,
+                including screen readers! 👓 Plus, it's super easy to learn but powerful enough to
+                structure complex websites! 🏗️
+            </p>
+
+            <div class="love-grid">
+                <div class="love-card">
+                    <span class="love-icon">🏗️</span>
+                    <h3>Structure</h3>
+                    <p>Organize content in a clear, logical way</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">♿</span>
+                    <h3>Accessible</h3>
+                    <p>Semantic HTML helps everyone access your content</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">🌍</span>
+                    <h3>Universal</h3>
+                    <p>Works on every browser and device!</p>
+                </div>
+                <div class="love-card">
+                    <span class="love-icon">📚</span>
+                    <h3>Easy to Learn</h3>
+                    <p>Perfect for beginners starting their journey!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML Basics -->
+    <section id="basics" class="basics-section">
+        <h2 class="section-title">
+            <span class="title-icon">📖</span>
+            HTML Basics
+            <span class="title-icon">📖</span>
+        </h2>
+
+        <div class="basics-grid">
+            <div class="basic-card">
+                <h3>Basic Structure 🏠</h3>
+                <div class="code-example">
+<pre><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;title&gt;</span>My Page<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>Hello World!<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Headings & Text 📝</h3>
+                <div class="code-example">
+<pre><code><span class="tag">&lt;h1&gt;</span>Main Heading<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span>Subheading<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;p&gt;</span>This is a paragraph!<span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Text formatting --&gt;</span>
+<span class="tag">&lt;strong&gt;</span>Bold text<span class="tag">&lt;/strong&gt;</span>
+<span class="tag">&lt;em&gt;</span>Italic text<span class="tag">&lt;/em&gt;</span></code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Links & Images 🔗</h3>
+                <div class="code-example">
+<pre><code><span class="comment">&lt;!-- Links --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"https://example.com"</span><span class="tag">&gt;</span>
+  Visit Site
+<span class="tag">&lt;/a&gt;</span>
+
+<span class="comment">&lt;!-- Images --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="value">"photo.jpg"</span>
+     <span class="attr">alt</span>=<span class="value">"Description"</span><span class="tag">&gt;</span></code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Lists 📋</h3>
+                <div class="code-example">
+<pre><code><span class="comment">&lt;!-- Unordered list --&gt;</span>
+<span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Apple 🍎<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Banana 🍌<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+
+<span class="comment">&lt;!-- Ordered list --&gt;</span>
+<span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span>First<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Second<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span></code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Semantic HTML 🎯</h3>
+                <div class="code-example">
+<pre><code><span class="tag">&lt;header&gt;</span>Site Header<span class="tag">&lt;/header&gt;</span>
+<span class="tag">&lt;nav&gt;</span>Navigation<span class="tag">&lt;/nav&gt;</span>
+<span class="tag">&lt;main&gt;</span>Main Content<span class="tag">&lt;/main&gt;</span>
+<span class="tag">&lt;article&gt;</span>Article<span class="tag">&lt;/article&gt;</span>
+<span class="tag">&lt;section&gt;</span>Section<span class="tag">&lt;/section&gt;</span>
+<span class="tag">&lt;footer&gt;</span>Footer<span class="tag">&lt;/footer&gt;</span></code></pre>
+                </div>
+            </div>
+
+            <div class="basic-card">
+                <h3>Forms 📋</h3>
+                <div class="code-example">
+<pre><code><span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="value">"/submit"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"name"</span><span class="tag">&gt;</span>Name:<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"text"</span>
+         <span class="attr">id</span>=<span class="value">"name"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="value">"submit"</span><span class="tag">&gt;</span>
+    Submit
+  <span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cool Examples -->
+    <section id="examples" class="examples-section">
+        <h2 class="section-title">
+            <span class="title-icon">🎨</span>
+            Cool Examples
+            <span class="title-icon">🎨</span>
+        </h2>
+
+        <div class="examples-container">
+            <div class="example-card">
+                <h3>🎴 Card Component</h3>
+                <div class="code-example">
+<pre><code><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"card"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="value">"product.jpg"</span>
+       <span class="attr">alt</span>=<span class="value">"Product"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h3&gt;</span>Product Name<span class="tag">&lt;/h3&gt;</span>
+  <span class="tag">&lt;p&gt;</span>Description here...<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;button&gt;</span>Buy Now<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>📰 Article Layout</h3>
+                <div class="code-example">
+<pre><code><span class="tag">&lt;article&gt;</span>
+  <span class="tag">&lt;header&gt;</span>
+    <span class="tag">&lt;h2&gt;</span>Article Title<span class="tag">&lt;/h2&gt;</span>
+    <span class="tag">&lt;time</span> <span class="attr">datetime</span>=<span class="value">"2025-01-15"</span><span class="tag">&gt;</span>
+      Jan 15, 2025
+    <span class="tag">&lt;/time&gt;</span>
+  <span class="tag">&lt;/header&gt;</span>
+  <span class="tag">&lt;p&gt;</span>Article content...<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/article&gt;</span></code></pre>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <h3>📊 Data Table</h3>
+                <div class="code-example">
+<pre><code><span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;th&gt;</span>Name<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th&gt;</span>Age<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+  <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span>Felix<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>20<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources-section">
+        <h2 class="section-title">
+            <span class="title-icon">🔗</span>
+            Helpful Resources
+            <span class="title-icon">🔗</span>
+        </h2>
+
+        <div class="resources-grid">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="resource-card">
+                <span class="resource-icon">📖</span>
+                <h3>MDN HTML</h3>
+                <p>Complete HTML documentation</p>
+            </a>
+
+            <a href="https://www.w3schools.com/html/" target="_blank" class="resource-card">
+                <span class="resource-icon">🎓</span>
+                <h3>W3Schools</h3>
+                <p>Interactive HTML tutorials</p>
+            </a>
+
+            <a href="https://html.spec.whatwg.org/" target="_blank" class="resource-card">
+                <span class="resource-icon">📋</span>
+                <h3>HTML Spec</h3>
+                <p>Official HTML specification</p>
+            </a>
+
+            <a href="https://validator.w3.org/" target="_blank" class="resource-card">
+                <span class="resource-icon">✅</span>
+                <h3>HTML Validator</h3>
+                <p>Check your HTML code</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💚 by Felix Divine</p>
+        <p class="footer-tagline">Building the web, one tag at a time! 🌐✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

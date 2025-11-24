@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Objects -->
+    <div class="floating-container" id="floatingContainer"></div>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <div class="weather-card">
+            <h1 class="app-title">Weather App</h1>
+
+            <!-- Search Section -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    class="search-input"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <span>Search</span>
+                </button>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message hidden">
+                City not found. Please try again.
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loader" class="loader hidden"></div>
+
+            <!-- Weather Display -->
+            <div id="weatherDisplay" class="weather-display hidden">
+                <!-- Weather Icon -->
+                <div class="weather-icon-container">
+                    <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+                </div>
+
+                <!-- City Name -->
+                <h2 id="cityName" class="city-name">---</h2>
+
+                <!-- Temperature -->
+                <div class="temperature">
+                    <span id="temp" class="temp-value">--</span>
+                    <span class="temp-unit">°C</span>
+                </div>
+
+                <!-- Weather Description -->
+                <p id="weatherDesc" class="weather-desc">---</p>
+
+                <!-- Weather Details Grid -->
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">🌡️</span>
+                        <div class="detail-info">
+                            <p class="detail-label">Feels Like</p>
+                            <p id="feelsLike" class="detail-value">--°C</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-icon">💧</span>
+                        <div class="detail-info">
+                            <p class="detail-label">Humidity</p>
+                            <p id="humidity" class="detail-value">--%</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-icon">💨</span>
+                        <div class="detail-info">
+                            <p class="detail-label">Wind Speed</p>
+                            <p id="windSpeed" class="detail-value">-- km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
