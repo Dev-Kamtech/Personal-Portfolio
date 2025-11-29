@@ -1,199 +1,584 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light">
-    <title>Felix Divine - Portfolio 🎨</title>
-    <link rel="stylesheet" href="portfolio-style.css">
+    <meta name="description" content="Felix Divine - Flutter & Web Developer Portfolio">
+    <meta property="og:title" content="Felix Divine - Developer Portfolio">
+    <meta property="og:description" content="Flutter & Web Developer creating amazing apps & websites">
+    <title>Felix Divine - Developer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+    <style>
+        @font-face { font-family: "Inter"; src: url("assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+        @font-face { font-family: "Inter"; src: url("assets/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+        @font-face { font-family: "Inter"; src: url("assets/yDtI2UI8XcEg1W2je9XPN3Noo.woff2"); font-display: swap; font-style: normal; font-weight: 600; }
+        @font-face { font-family: "Inter"; src: url("assets/DXD0Q7LSl7HEvDzucnyLnGBHM.woff2"); font-display: swap; font-style: normal; font-weight: 700; }
+        @font-face { font-family: "Inter"; src: url("assets/jn4BtSPLlS0NDp1KiFAtFKiiY0o.woff2"); font-display: swap; font-style: normal; font-weight: 900; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent: #ff8c07;
+            --accent-hover: #ff9466;
+            --border: #2a2a2a;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 8vw, 72px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .hero .gradient-text {
+            background: linear-gradient(135deg, var(--accent), #ff6b00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(255, 140, 7, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .about-text strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .skill-tag {
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 140, 7, 0.2);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(356px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            will-change: transform;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .project-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent), #ff6b00);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .project-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            padding: 4px 12px;
+            background: rgba(255, 140, 7, 0.1);
+            border: 1px solid rgba(255, 140, 7, 0.2);
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 12px;
+            transition: gap 0.2s;
+        }
+
+        .project-link:hover {
+            gap: 8px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .contact-section p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .social-link span:first-child {
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 32px;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .footer-tagline {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 810px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            nav .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 32px 24px;
+            }
+
+            footer {
+                position: relative;
+            }
+
+            footer .container {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .project-card {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+        .project-card:nth-child(7) { animation-delay: 0.7s; }
+    </style>
 </head>
 <body>
-    <!-- Floating cute elements -->
-    <div class="floating-container" id="floatingContainer"></div>
-    <div class="sparkles-container" id="sparklesContainer"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Felix Divine</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="profile-pic">
-                <div class="avatar">👨‍💻</div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Hi, I'm <span class="gradient-text">Felix Divine</span><br>
+                    Flutter & Web Developer
+                </h1>
+                <p>
+                    I'm an 18-year-old passionate developer creating beautiful mobile apps and interactive websites.
+                    I specialize in Flutter, modern web technologies, and building user experiences that bring joy to people.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                        <span>→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Get In Touch
+                    </a>
+                </div>
             </div>
-
-            <h1 class="hero-title">
-                <span class="title-word">Hi, I'm</span>
-                <span class="title-word highlight">Felix Divine!</span>
-            </h1>
-
-            <p class="hero-subtitle">
-                Flutter & Web Developer 🚀 | Creating amazing apps & websites! ✨
-            </p>
-
-            <div class="hero-tags">
-                <span class="tag">💻 Full-Stack Developer</span>
-                <span class="tag">📱 Mobile Apps</span>
-                <span class="tag">🎨 UI/UX Enthusiast</span>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="#skills" class="btn btn-primary">
-                    <span>See My Skills</span>
-                    <span class="btn-icon">🎯</span>
-                </a>
-                <a href="#projects" class="btn btn-secondary">
-                    <span>View Projects</span>
-                    <span class="btn-icon">🚀</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Animated decorations -->
-        <div class="hero-decorations">
-            <div class="decoration decoration-1">💻</div>
-            <div class="decoration decoration-2">🎨</div>
-            <div class="decoration decoration-3">🚀</div>
-            <div class="decoration decoration-4">⚡</div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" style="padding-bottom: 120px;">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-icon">👋</span>
-                About Me
-                <span class="title-icon">👋</span>
-            </h2>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Who I am and what I do</p>
+            </div>
 
-            <div class="about-content">
-                <p class="about-text">
-                    I'm a passionate 18-year-old developer who LOVES building things! 🎉 I specialize in
-                    creating beautiful mobile apps with <strong>Flutter</strong> and interactive websites
-                    with modern web technologies! 🌐
-                </p>
-                <p class="about-text">
-                    I believe in writing clean, efficient code and creating user experiences that bring
-                    joy to people! When I'm not coding, you'll find me learning new technologies and
-                    exploring the latest development trends! 🚀
-                </p>
-
-                <div class="fun-facts">
-                    <div class="fact-card">
-                        <span class="fact-icon">☕</span>
-                        <p>Coffee-powered coder!</p>
-                    </div>
-                    <div class="fact-card">
-                        <span class="fact-icon">🎮</span>
-                        <p>Love coding & gaming!</p>
-                    </div>
-                    <div class="fact-card">
-                        <span class="fact-icon">🌟</span>
-                        <p>Always learning!</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate developer who <strong>loves building things</strong>! I specialize in
+                        creating beautiful mobile apps with Flutter and interactive websites with modern web technologies.
+                    </p>
+                    <p>
+                        I believe in writing clean, efficient code and creating user experiences that bring
+                        joy to people. When I'm not coding, you'll find me learning new technologies and
+                        exploring the latest development trends.
+                    </p>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">My Skills</h3>
+                    <div class="skills-tags">
+                        <a href="flutter-learn/index.html" class="skill-tag">🦋 Flutter</a>
+                        <a href="dart-learn/index.html" class="skill-tag">🎯 Dart</a>
+                        <a href="html-learn/index.html" class="skill-tag">🌐 HTML</a>
+                        <a href="css-learn/index.html" class="skill-tag">🎨 CSS</a>
+                        <a href="js-learn/index.html" class="skill-tag">⚡ JavaScript</a>
+                        <a href="firebase-learn/index.html" class="skill-tag">🔥 Firebase</a>
+                        <a href="supabase-learn/index.html" class="skill-tag">💚 Supabase</a>
+                        <a href="react-native-learn/index.html" class="skill-tag">⚛️ React Native</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section with Clickable Cards -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-icon">🎯</span>
-                My Skills
-                <span class="title-icon">🎯</span>
-            </h2>
-
-            <p class="skills-intro">Click on any skill to learn more about it! 🎓✨</p>
-
-            <div class="skills-grid">
-                <a href="flutter-learn/index.html" class="skill-card flutter">
-                    <div class="skill-icon">🦋</div>
-                    <h3>Flutter</h3>
-                    <p>Beautiful cross-platform mobile apps!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-
-                <a href="dart-learn/index.html" class="skill-card dart">
-                    <div class="skill-icon">🎯</div>
-                    <h3>Dart</h3>
-                    <p>Flutter's powerful language!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-
-                <a href="html-learn/index.html" class="skill-card html">
-                    <div class="skill-icon">🌐</div>
-                    <h3>HTML</h3>
-                    <p>Structure the web!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-
-                <a href="css-learn/index.html" class="skill-card css">
-                    <div class="skill-icon">🎨</div>
-                    <h3>CSS</h3>
-                    <p>Style with magic!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-
-                <a href="js-learn/index.html" class="skill-card javascript">
-                    <div class="skill-icon">⚡</div>
-                    <h3>JavaScript</h3>
-                    <p>Make it interactive!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-
-                <a href="firebase-learn/index.html" class="skill-card firebase">
-                    <div class="skill-icon">🔥</div>
-                    <h3>Firebase</h3>
-                    <p>Backend made easy!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-
-                <a href="supabase-learn/index.html" class="skill-card supabase">
-                    <div class="skill-icon">💚</div>
-                    <h3>Supabase</h3>
-                    <p>Open-source backend!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-
-                <a href="react-native-learn/index.html" class="skill-card react-native">
-                    <div class="skill-icon">⚛️</div>
-                    <h3>React Native</h3>
-                    <p>Native apps with React!</p>
-                    <div class="skill-badge">Click to Learn!</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" style="padding-bottom: 120px;">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-icon">🚀</span>
-                My Projects
-                <span class="title-icon">🚀</span>
-            </h2>
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
 
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-icon">💼</div>
                     <h3>WorkPost App</h3>
-                    <p>Job posting platform with Flutter, Firebase & FastAPI backend!</p>
+                    <p>Job posting platform with Flutter, Firebase & FastAPI backend for connecting employers with job seekers.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">FastAPI</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-icon">🌤️</div>
                     <h3>Weather App</h3>
-                    <p>Beautiful weather app with real-time data and gorgeous UI!</p>
+                    <p>Beautiful weather application with real-time data and gorgeous UI showing current conditions and forecasts.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
                     </div>
                     <a href="weather-app/index.html" class="project-link">View App →</a>
                 </div>
@@ -201,11 +586,11 @@
                 <div class="project-card">
                     <div class="project-icon">💰</div>
                     <h3>Currency Converter</h3>
-                    <p>Real-time currency conversion with live exchange rates!</p>
+                    <p>Real-time currency conversion tool with live exchange rates from multiple sources worldwide.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">API</span>
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">API</span>
                     </div>
                     <a href="currency-converter/index.html" class="project-link">View App →</a>
                 </div>
@@ -213,11 +598,11 @@
                 <div class="project-card">
                     <div class="project-icon">💸</div>
                     <h3>Expense Tracker</h3>
-                    <p>Track expenses with beautiful charts and local storage!</p>
+                    <p>Track your expenses with beautiful charts and local storage. Visualize spending patterns over time.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">LocalStorage</span>
-                        <span class="tech-tag">Charts</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">LocalStorage</span>
+                        <span class="tech-badge">Charts</span>
                     </div>
                     <a href="expense-tracker/index.html" class="project-link">View App →</a>
                 </div>
@@ -225,11 +610,11 @@
                 <div class="project-card">
                     <div class="project-icon">💭</div>
                     <h3>Quote Generator</h3>
-                    <p>Get inspired with random quotes and share them!</p>
+                    <p>Get inspired with random motivational quotes and share them with friends on social media.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">API</span>
-                        <span class="tech-tag">UI/UX</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">API</span>
+                        <span class="tech-badge">UI/UX</span>
                     </div>
                     <a href="quote-generator/index.html" class="project-link">View App →</a>
                 </div>
@@ -237,11 +622,11 @@
                 <div class="project-card">
                     <div class="project-icon">🎮</div>
                     <h3>Tic-Tac-Toe</h3>
-                    <p>Classic game with unbeatable AI using Minimax algorithm!</p>
+                    <p>Classic game with unbeatable AI using the Minimax algorithm. Can you beat the computer?</p>
                     <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">AI</span>
-                        <span class="tech-tag">Game Logic</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">AI</span>
+                        <span class="tech-badge">Game Logic</span>
                     </div>
                     <a href="tic-tac-toe/index.html" class="project-link">Play Game →</a>
                 </div>
@@ -249,11 +634,11 @@
                 <div class="project-card">
                     <div class="project-icon">🌈</div>
                     <h3>Happy Mood Booster</h3>
-                    <p>Kawaii mood regulator with cute animations, games, and happy vibes!</p>
+                    <p>Kawaii mood regulator with cute animations, mini-games, and positive vibes to brighten your day!</p>
                     <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">Animations</span>
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">Animations</span>
                     </div>
                     <a href="cartoon-mood-app/index.html" class="project-link">View App →</a>
                 </div>
@@ -262,53 +647,83 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" style="padding-bottom: 120px;">
         <div class="container">
-            <h2 class="section-title">
-                <span class="title-icon">📬</span>
-                Get In Touch
-                <span class="title-icon">📬</span>
-            </h2>
+            <div class="contact-section">
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind? Want to collaborate? Just want to say hi?<br>I'd love to hear from you!</p>
 
-            <p class="contact-text">
-                Have a project in mind? Want to collaborate? Just want to say hi? 👋<br>
-                I'd love to hear from you! Let's create something amazing together! ✨
-            </p>
+                <div class="cta-buttons" style="justify-content: center;">
+                    <a href="mailto:felixdivine@example.com" class="btn btn-primary">
+                        Send Email
+                        <span>📧</span>
+                    </a>
+                    <a href="Felix_Divine_CV.pdf" download class="btn btn-secondary">
+                        Download CV
+                        <span>📄</span>
+                    </a>
+                </div>
 
-            <div class="contact-buttons">
-                <a href="mailto:felixdivine@example.com" class="btn btn-primary">
-                    <span>Send Email</span>
-                    <span class="btn-icon">📧</span>
-                </a>
-                <a href="Felix_Divine_CV.pdf" download="Felix_Divine_CV.pdf" class="btn btn-secondary">
-                    <span>Download CV</span>
-                    <span class="btn-icon">📄</span>
-                </a>
-            </div>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/felixdivine633" target="_blank" class="social-link">
-                    <span>💼</span>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/Dev-Kamtech" target="_blank" class="social-link">
-                    <span>💻</span>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://wa.me/2347035707950" target="_blank" class="social-link">
-                    <span>💬</span>
-                    <span>WhatsApp</span>
-                </a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/felixdivine633" target="_blank" class="social-link">
+                        <span>💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Dev-Kamtech" target="_blank" class="social-link">
+                        <span>💻</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/2347035707950" target="_blank" class="social-link">
+                        <span>💬</span>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>Made with 💖 by Felix Divine</p>
-        <p class="footer-tagline">Building the future, one line of code at a time! 🚀✨</p>
+    <footer>
+        <div class="container">
+            <p>© 2024 Felix Divine. All rights reserved.</p>
+            <p class="footer-tagline">Building the future, one line of code at a time 🚀</p>
+        </div>
     </footer>
 
-    <script src="portfolio-script.js"></script>
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.project-card, .about-text, .skills-tags').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

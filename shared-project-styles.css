@@ -1,0 +1,194 @@
+/* Shared Project Styles - Dark Theme */
+
+/* Override root variables for dark theme */
+:root {
+    --bg-primary: #0a0a0a !important;
+    --bg-secondary: #1a1a1a !important;
+    --bg-dark: #0a0a0a !important;
+    --card-bg: #1a1a1a !important;
+    --text-primary: #ffffff !important;
+    --text-secondary: #a0a0a0 !important;
+    --accent: #ff8c07 !important;
+    --accent-primary: #ff8c07 !important;
+    --accent-secondary: #ff9466 !important;
+    --accent-hover: #ff9466 !important;
+    --accent-glow: rgba(255, 140, 7, 0.5) !important;
+    --border: #2a2a2a !important;
+    --shadow: rgba(0, 0, 0, 0.3) !important;
+
+    /* Override any blue accents */
+    --bg-gradient-start: #ff8c07 !important;
+    --bg-gradient-end: #ff6b00 !important;
+}
+
+/* Force dark background - SUPER AGGRESSIVE */
+html,
+html body,
+body {
+    background: #0a0a0a !important;
+    background-color: #0a0a0a !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+/* Override any gradient backgrounds on body */
+body::before,
+body::after {
+    display: none !important;
+}
+
+/* Project Header */
+.project-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #2a2a2a;
+    z-index: 10000;
+    padding: 16px 32px;
+}
+
+.project-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-to-portfolio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.back-to-portfolio:hover {
+    border-color: #ff8c07;
+    color: #ff8c07;
+    transform: translateY(-2px);
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Add top padding to body to account for fixed header */
+body {
+    padding-top: 70px !important;
+}
+
+/* Style all cards to match portfolio */
+.weather-card,
+.converter-card,
+.expense-card,
+.quote-card,
+.game-card,
+.mood-card,
+.container > div:first-child,
+.main-card {
+    background: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Style buttons to match - AGGRESSIVE */
+button:not(.back-to-portfolio),
+.btn:not(.back-to-portfolio),
+.search-btn,
+.convert-btn,
+input[type="button"],
+input[type="submit"],
+button[type="button"],
+button[type="submit"] {
+    background: #ff8c07 !important;
+    background-color: #ff8c07 !important;
+    background-image: none !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    transition: all 0.2s !important;
+}
+
+button:not(.back-to-portfolio):hover,
+.btn:not(.back-to-portfolio):hover,
+.search-btn:hover,
+.convert-btn:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background: #ff9466 !important;
+    background-color: #ff9466 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px rgba(255, 140, 7, 0.3) !important;
+}
+
+/* Style inputs */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    background: #0a0a0a !important;
+    border: 1px solid #2a2a2a !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    transition: all 0.2s !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: #ff8c07 !important;
+    box-shadow: 0 0 0 3px rgba(255, 140, 7, 0.1) !important;
+}
+
+/* Override any existing gradient backgrounds */
+.app-title,
+h1,
+h2 {
+    background: linear-gradient(135deg, #ff8c07, #ff6b00) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-header {
+        padding: 12px 16px;
+    }
+
+    .project-title {
+        font-size: 16px;
+    }
+
+    .back-to-portfolio {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    body {
+        padding-top: 60px !important;
+    }
+}
